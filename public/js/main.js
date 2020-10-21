@@ -5,7 +5,7 @@ const userList = document.getElementById('users');
 
 // Get username and room from URL
 const { username, room } = Qs.parse(location.search, {
-  ignoreQueryPrefix: true
+  ignoreQueryPrefix: true,
 });
 
 const socket = io();
@@ -20,7 +20,7 @@ socket.on('roomUsers', ({ room, users }) => {
 });
 
 // Message from server
-socket.on('message', message => {
+socket.on('message', (message) => {
   console.log(message);
   outputMessage(message);
 
@@ -29,15 +29,15 @@ socket.on('message', message => {
 });
 
 // Message submit
-chatForm.addEventListener('submit', e => {
+chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get message text
   let msg = e.target.elements.msg.value;
-  
+
   msg = msg.trim();
-  
-  if (!msg){
+
+  if (!msg) {
     return false;
   }
 
@@ -56,7 +56,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
-  p.innerHTML += `<span>${message.time}</span>`;
+  p.innerHTML += ` <span>${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
@@ -73,9 +73,9 @@ function outputRoomName(room) {
 // Add users to DOM
 function outputUsers(users) {
   userList.innerHTML = '';
-  users.forEach(user=>{
+  users.forEach((user) => {
     const li = document.createElement('li');
     li.innerText = user.username;
     userList.appendChild(li);
   });
- }
+}

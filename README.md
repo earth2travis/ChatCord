@@ -1,13 +1,25 @@
 # ChatCord App
-Realtime chat app with websockets using Node.js, Express and Socket.io with Vanilla JS on the frontend with a custom UI
-[![Run on Repl.it](https://repl.it/badge/github/bradtraversy/chatcord)](https://repl.it/github/bradtraversy/chatcord)
+
+Realtime node chat app with websockets
+
+## Packages
+
+- [express](https://www.npmjs.com/package/express) node web framework
+- [socket.io](https://www.npmjs.com/package/socket.io) event-based communication
+- [moment](https://www.npmjs.com/package/moment) formatting dates
+- [nodemon](https://www.npmjs.com/package/nodemon) restarting node application when file changes
+
+## Libraries
+
+- [qs](https://cdnjs.com/libraries/qs) querystring parsing
+
 ## Usage
-```
+
+```shell
 npm install
-npm run dev
-
-Go to localhost:3000
+npm start
 ```
 
-## Notes
-The *_html_css* folder is just a starter template to follow along with the tutorial at https://www.youtube.com/watch?v=jD7FnbI76Hg&t=1339s. It is not part of the app
+## Resources
+
+From Traversy Media project: [Realtime Chat With Users & Rooms - Socket.io, Node & Express](https://www.youtube.com/watch?v=jD7FnbI76Hg&pbjreload=101)
