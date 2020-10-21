@@ -16,7 +16,18 @@ Realtime node chat app with websockets
 ## Usage
 
 ```shell
+git clone https://github.com/earth2travis/ChatCord.git
+```
+
+```shell
+cd ChatCord
+```
+
+```shell
 npm install
+```
+
+```shell
 npm start
 ```
 
